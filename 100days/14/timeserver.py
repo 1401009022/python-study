@@ -2,7 +2,7 @@ from socket import socket,SOCK_STREAM,AF_INET
 from datetime import datetime
 
 def main():
-    # 1.创建套接字对象并指定使用哪种传输服务
+    # 1-5.创建套接字对象并指定使用哪种传输服务
     # family=AF_INET - IPv4地址
     # family=AF_INET6 - IPv6地址
     # type=SOCK_STREAM -TCP套接字
@@ -11,7 +11,7 @@ def main():
     server = socket(family=AF_INET, type=SOCK_STREAM)
     # 2.绑定IP地址和端口(端口用于区分不同的服务)
     # 同一时间在同一个端口上只能绑定一个服务 、否则报错
-    server.bind(('127.0.0.1',6789))
+    server.bind(('127.0.0.1-5',6789))
     # 3.开启监听 - 监听客户端连接到服务器
     # 参数512可以理解为连接队列的大小 ，最大同时连接数？
     server.listen(512)

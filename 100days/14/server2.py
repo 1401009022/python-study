@@ -24,10 +24,10 @@ def main():
             self.cclient.send(json_str.encode('utf-8'))
             #能不能再发送个发送成功的提醒呢？
             self.cclient.close()
-    # 1.创建套接字对象并指定使用哪种传输服务
+    # 1-5.创建套接字对象并指定使用哪种传输服务
     server = socket()
     # 2.绑定ip地址和端口（区分不同的服务）
-    server.bind(('127.0.0.1',5566))
+    server.bind(('127.0.0.1-5',5566))
     # 3.开启监听 -监听客户端连接到服务器
     server.listen(512)
     print('服务器开始监听。。。。')

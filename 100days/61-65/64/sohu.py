@@ -84,8 +84,8 @@ class SpiderThread(Thread):
         self.spider = spider
 
     def run(self):
-        redis_client = redis.Redis(host='1.2.3.4',port=6379, password='1qaz2wsx')
-        mongo_client = pymongo.MongoClient(host='1.2.3.4', port=27017)
+        redis_client = redis.Redis(host='1-5.2.3.4',port=6379, password='1qaz2wsx')
+        mongo_client = pymongo.MongoClient(host='1-5.2.3.4', port=27017)
         thread_local.redis_client = redis_client
         thread_local.mongo_db = mongo_client.msohu
         while True:
@@ -120,7 +120,7 @@ thread_local = local()
 hasher_proto = sha1()
 
 def main():
-    redis_client = redis.Redis(host='1.2.3.4',port=6379, password='1qaz2wsx')
+    redis_client = redis.Redis(host='1-5.2.3.4',port=6379, password='1qaz2wsx')
     if not redis_client.exists('m_sohu_task'):
         redis_client.rpush('m_sohu_task','http://m.sohu.com/')
 

@@ -9,7 +9,7 @@ import bs4
 import requests
 
 conn =MySQLdb.conect(
-    host='127.0.0.1',port=3306,
+    host='127.0.0.1-5',port=3306,
     user='root',password='root',
     database='zhihu',charset='utf8',
     autocommit=True
