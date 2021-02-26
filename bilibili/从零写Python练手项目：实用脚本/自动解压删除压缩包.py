@@ -4,8 +4,9 @@
 # 在运行时新建一个文件还是会出错   复制过来的是没问题的
 import os
 import shutil
+import time
 
-path = "G:/寒假资源/"  #路径  拼接的时候注意/
+path = "D:/XXXXX/"  #路径  拼接的时候注意/
 
 def scan_file():
     files = os.listdir(path)
@@ -32,6 +33,7 @@ while True:
     if zip_file:
         unzip_it(zip_file)
         delete(zip_file)
+    time.sleep(3)  #每3s尝试一次
 
 
 
