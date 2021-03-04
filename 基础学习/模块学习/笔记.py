@@ -65,6 +65,8 @@ print(sys.path) # 查看路径
 #   卸载
 #   pip freeze列出版本  pip list
 
+# 包和普通目录不一样 包多了一个__init__.py 文件
+# 主要用来对包进行一些初始化
 
 
 
